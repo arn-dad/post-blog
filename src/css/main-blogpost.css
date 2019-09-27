@@ -1,0 +1,32 @@
+.main-blogpost main {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  height: calc(100% - 70px - 10px); /* header height and margin bottom */
+}
+
+.main-blogpost aside {
+  width: 20%;
+}
+
+.blogs {
+  width: 78%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blogs section {
+  height: 75%;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.blogs section article {
+  height: 150px;
+  margin: 5px 0;
+}
+
+.blogs footer {
+  height: 20%
+}
