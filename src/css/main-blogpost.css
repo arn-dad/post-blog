@@ -6,6 +6,7 @@
 }
 
 .main-blogpost aside {
+  overflow-y: auto;
   width: 20%;
 }
 
@@ -24,9 +25,51 @@
 
 .blogs section article {
   height: 150px;
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 .blogs footer {
   height: 20%
+}
+
+.artical-wrapp {
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,0.08);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.artical-wrapp:hover {
+  box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.1);
+}
+
+.article-header {
+  height: 28px;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.article-author {
+  font-weight: 600;
+}
+
+.article-body {
+  height: auto;
+  width: 100%;
+  padding: 5px;
+}
+
+.aside-blogger {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 8px;
+}
+
+.aside-avatar {
+  width:45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 8px;
 }
