@@ -5,12 +5,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./src/css/default.css">
+  <link rel="stylesheet" href="./src/css/signup-blogpost.css">
+  <title>Signup</title>
 </head>
 
 <body>
-  <div class="container"></div>
+  <div class="container main-signup">
+    <header class="outline">
+      <nav>
+        <a class="btn btn-link" href="./index.html" role="button">Home</a>
+        <a class="btn btn-link" href="./login.html" role="button">Login</a>
+      </nav>
+    </header>
+    <main class="outline">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <form>
+            <div class="form-top">
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="First Name">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Last Name">
+              </div>
+
+              <div class="form-group">
+                <select id="inputCity" class="form-control">
+                  <option selected>City</option>
+                  <option>...</option>
+                </select>
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" name="gender" type="radio" id="inlineCheckbox1" value="Male">
+                <label class="form-check-label" for="inlineCheckbox1">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" name="gender" type="radio" id="inlineCheckbox2" value="Female">
+                <label class="form-check-label" for="inlineCheckbox2">Female</label>
+              </div>
+            </div>
+
+            <div class="form-footer">
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Send me Email</label>
+              </div>
+              <button type="submit" class="btn btn-outline-success">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
 </body>
 
 </html>

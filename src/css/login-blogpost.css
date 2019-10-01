@@ -1,0 +1,16 @@
+.main-login main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5px;
+  height: calc(100% - 70px - 10px); /* header height and margin bottom */
+}
+
+.main-login .login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form button {
+  align-self: center;
+}
