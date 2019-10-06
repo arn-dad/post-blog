@@ -5,11 +5,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./src/css/default.css">
+  <link rel="stylesheet" href="./src/css/workspace-blogpost.css">
+  <title>Workspace</title>
+
 </head>
 
 <body>
+  <div class="container workspace">
+    <header class="outline">
+      <nav>
+        <a class="btn btn-link" href="./index.html" role="button">Home</a>
+        <a class="btn btn-link" href="./login.html" role="button">Login</a>
+      </nav>
+    </header>
+    <main class="outline">
+      <div class="workspace-usercard">
+        <div class="user-avatar"></div>
+        <button id="create-new-post" type="button" class="btn btn-warning">Create New Post</button>
+      </div>
+      <section id='workspace-blogs' class="outline"></section>
+    </main>
+  </div>
 
+  <div id="modal" class="modal">
+
+    <div class="modal-content">
+      <span class="close">&times;</span>
+
+      <div class="form-group">
+        <label class="input-label" for="exampleFormControlInput1">Title</label>
+        <input id="post-title" type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label class="input-label" for="exampleFormControlTextarea1">Post</label>
+        <textarea id="post-content" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+
+      <button class="btn btn-primary" onclick="createNewPost()" type="submit">Create Post</button>
+    </div>
+  
+  </div>
+  <script src="./src/script/main.js"></script>
+  <script src="./src/script/modal.js"></script>
 </body>
 
 </html>

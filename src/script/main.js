@@ -1,8 +1,6 @@
 const sectionWrapper = document.getElementById("article-wrapper");
 const asideWrapper = document.getElementById("aside-wrapper");
 
-
-
 const fetchArticles = function (callback) { // fetch all articles
   return fetch(
     "https://5d8e0901370f02001405c7c9.mockapi.io/api/v1/postblog/postblog",
@@ -85,6 +83,52 @@ const showBloggers = function (data) { // show Articles
 
     asideWrapper.appendChild(blogger)
   }
+}
+
+const createNewPost = function () {
+  const postTitle = document.getElementById("post-title");
+  const postContent = document.getElementById("post-content");
+
+  if (!postTitle.value.trim() && !postContent.value.trim()) {
+    postContent.style = 'border-color: red'
+    postTitle.style = 'border-color: red'
+    return
+  }
+  postContent.style = 'border-color: #ced4da'
+  postTitle.style = 'border-color: #ced4da'
+
+  const data = {
+    title: postTitle.value.trim(),
+    description: postContent.value.trim(),
+    author: 'unknown'
+  }
+
+  fetch(
+    "https://5d8e0901370f02001405c7c9.mockapi.io/api/v1/postblog/postblog",
+    {
+      method: "POST",
+      body: JSON.stringify(data)
+    }
+  )
+    .then(function (response) {
+      if (response.ok && response.status === 201) {
+        const modal = document.getElementById("modal");
+        modal.style.display = "none";
+        postTitle.value = '';
+        postContent.value = '';
+      }
+
+
+      if (response.status === 400) {
+        const modal = document.getElementById("modal");
+        // modal.style.display = "none";
+        postTitle.value = "Max number of elements reached for this resource!";
+        postContent.value = '';
+      }
+    })
+    .catch(function (err) {
+      console.log("Error", err);
+    });
 }
 
 const onload = function () {
