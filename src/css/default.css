@@ -12,7 +12,7 @@ body {
   border: 1px solid #ccc;
 }
 
-.container {
+.main-container {
   width: 100%;
   height: 100vh;
   padding: 10px 15px;
